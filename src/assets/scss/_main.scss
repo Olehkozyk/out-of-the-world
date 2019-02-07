@@ -1,0 +1,240 @@
+.text-primary{
+    color: $primary-color;
+}
+#{text-inputs()}{
+    margin: 0;
+}
+[type=number]{
+    appearance: none;
+    &::-webkit-inner-spin-button{
+        display: none;
+    }
+}
+button{
+    cursor: pointer;
+}
+a, button{
+    transition: .3s ease-in;
+    transition-property: color, background-color, opacity;
+    svg{
+        fill: currentColor;
+    }
+}
+.ba-img-slider{
+
+    img{
+        width: 100%;
+        height: auto;
+        @include breakpoint(large){
+            height: 100%;
+        }
+    }
+}
+.ba-header{
+    display: none;
+}
+.ba-slider{
+    padding: 25px;
+    position: relative;
+    
+}
+.container-slid{
+    padding: 0 20px 0 20px;
+    max-width: 1090px;
+    margin: 0 auto;
+}
+
+*:focus{
+    outline: none;
+}
+.padding-slid{
+   
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.4);
+
+        outline: none;
+    margin: 0 auto;
+    padding: 0 20px 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    // padding: 0 20px 0px;
+    // padding: 25px;
+.slick-dots{
+    position: absolute;
+    display: none;
+    @include breakpoint(medium){
+        display: block;
+        
+    }
+    .slick-active{
+            color: #000;
+            button{
+                color: #000;
+            }
+    }
+    content: "";
+    margin: 0;
+    padding: 0;
+    right: 20px;
+    top: 20%;
+    list-style: none;
+    li{
+        color: #ccc;
+        margin-bottom: 50px;
+        font-family: 'Lato', sans-serif;
+        button{
+            color: #ccc;
+        }
+        font-size: 14px;
+
+        &::before{
+            content: "0";
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+}
+.wrapper {
+	position: relative;
+	display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    @include breakpoint(medium){
+        justify-content: flex-end;
+        
+    }
+    input{
+        display: none;
+    }
+    label{
+        margin: 0;
+        margin-left: 10px;
+    }
+    label:hover ~ label svg {
+        fill: #c74c4c;
+        transition: .2s ease-in;
+        
+        
+      } 
+    label{
+        
+        svg{
+            fill: #000;
+            transition: .2s ease-in;
+            z-index: 11;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+.wrapper{
+    input:checked ~ label svg {
+        fill: #c74c4c;
+      }
+}
+  .wrapper label:hover{
+	cursor: pointer;
+}
+.ba-slider-info{
+    padding-top: 10px;
+    @include breakpoint(large){
+        padding-top: 28px;
+    }
+    &__title{
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-family: "trumpGothic";
+        font-size: 30px;
+        color:  #c74c4c;
+        max-width: 100%;
+        text-align: center;
+        @include breakpoint(medium){
+            font-size: 65px;
+            margin-left: -70px;
+            max-width: 210px;
+            text-align: left;
+        }
+        @include breakpoint(large){
+            font-size: 102px; 
+        }
+    }
+    a{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        position: relative;
+        overflow: hidden;
+        color:  #c74c4c;
+        display: inline-block;
+        
+        span{
+            display: inline-block;
+            transition: .3s ease-in;
+            position: relative;
+            svg{
+                width: 20px;
+                top: -15px;
+                left: -29px;
+                height: 20px;
+                position: absolute;
+                transform: rotateX(90deg);
+                transition: .2s ease-in;
+            }
+        }
+        &:hover{
+           color: aqua;
+           span{
+               svg{
+                transform: rotateX(0);
+                transition: transform .2s ease-in, color .1s ease-in;
+                
+               }
+           }
+           .span-link{
+            transition: .3s ease-in;
+            transform: translateX(-100%);
+           }
+        }
+        
+     
+    }
+    p{
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        color:  #ccc;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        @include breakpoint(medium){
+            max-width: 232px;
+            text-align: left;
+           
+        }
+    }
+}
+body{
+    background: #f5f5f5;
+    // height: 100vh;
+    padding: 100px 0 100px;
+    
+}
+.div4ik-piv4ik{
+    position: absolute;
+    
+    color: #ccc;
+    right: 0;
+    bottom: 0;
+    display: none;
+    @include breakpoint(medium){
+        display: block;
+        font-size: 50px;
+    }
+    @include breakpoint(large){
+        
+        font-size: 90px;
+       
+    }
+}
+
